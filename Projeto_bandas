@@ -1,0 +1,55 @@
+#Crie um programa que gerencie um dicionário com dados de Bandas Musicais. A chave será onome da banda (uma string).
+#O valor será uma lista, com os seguintes dados: ano_criação (inteiro), integrantes (lista detuplas) onde cada tupla = (‘nome’, [Instumento1, Instrumento2,...InstrumentoN} )
+#Exemplo:
+#Bandas= { "Beatles" : [ 1960 ,[ ("John Lennon", ["Guitarra", "Vocal"] ), ("Paul McCartney",["Baixo", "Vocal"] ), ("George Harrison", ["Guitarra"] ), ("Ringo Starr", ["Bateria"] ) ] ] , "Queen" :[ 1970 ,[ ("Freddie Mercury", ["Vocal"] ), ("Brian May", ["Guitarra"] ), ("Roger Taylor", ["Bateria"]), ("John Deacon", ["Baixo"] ) ] ] ,
+#"Nirvana" : [ 1987 ,[ ("Kurt Cobain ", ["Guitarra", "Vocal"] ), ("Krist Novoselic ", ["Baixo"] ),("Dave Grohl ", ["Bateria"] ) ] ] }
+#Projeto Bandas Musicais
+#a) Crie uma função que receba por parâmetro o dicionário principal, leia os dados completos de uma novabanda e insira no dicionário. Verifique se o nome da banda já existe, e neste caso emita uma mensagem deerro.
+
+#b) Crie uma função para alterar os dados de um integrante de uma banda. Para isso é necessário enviar para a função o dicionário principal, o nome da banda e o nome do integrante. 
+# Os dados a serem alteradosdevem ser lidos dentro da função, tanto o nome do integrante quanto dos instrumentos. Caso a banda ou onome fornecido não exista, exibir uma mensagem de erro.
+
+
+#c) Crie uma função que receba por parâmetro o dicionário principal exiba todas as informações de todas asbandas cadastradas de maneira FORMATADA
+
+#d) Crie uma função que receba por parâmetro o dicionário principal e o nome da banda, e exiba seus dadosde maneira FORMATADA. Após os dados dos integrantes, exiba também a quantidade de integrantes quetocam cada um dos instrumentos utilizados pela banda. Se o nome da banda não existir, exiba umamensagem de erro.
+
+
+
+
+def inserir_banda(bandas):
+
+    dados_banda = []
+    membro_descricao = []
+    membro_instrumentos = ()
+    instrumentos = []
+
+    while True:
+        banda = input("Insira o nome da banda: ")
+        if banda in bandas:
+            print("Banda ja registrada")
+        else:
+            ano = input("Insira o ano de criação da banda: ")
+            while not ano.isdigit():
+                print("ano invalido tente novamente:")
+                ano = input("Insira o ano de criaçao da banda: ")
+            dados_banda.append(ano)
+    
+        membro = input("Digite o membro da banda:")
+        membro_instrumentos += (membro,)
+        quantidade_instrumentos = int(input("Insira a quantidade de instrumentos:"))
+        for i in range(quantidade_instrumentos):
+            instrumento = input("Insira o instrumento:")
+            instrumentos.append(instrumento)
+        membro_instrumentos += (instrumentos,)
+        bandas[banda] = membro_descricao
+        break         
+        
+def alterar_dados(bandas,nome_banda,nome_integrante):
+    if nome_banda in bandas:
+        while True:
+            if nome_banda in bandas:
+                
+            else:
+                print("Nome nao encontrado")
+                break
