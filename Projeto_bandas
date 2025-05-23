@@ -57,11 +57,60 @@ def inserir_banda(bandas):
 
 def alterar_dados(bandas,nome_banda,nome_integrante):
     if nome_banda in bandas:
+        del(bandas[nome_banda])
+        print("Atualize os dados da banda")
+        ano = input("Insira o ano de criação da banda: ")
+        while not ano.isdigit():
+                print("ano invalido tente novamente:")
+                ano = input("Insira o ano de criaçao da banda: ")
+                dados_banda.append(ano)
+
+        rep = input("Quantos membros deseja adicionar?")
+        for repeticao in range(rep):
+            membro = input("Digite o membro da banda:")
+            membro_instrumentos += (membro,)
+            quantidade_instrumentos = int(input("Insira a quantidade de instrumentos:"))
+            for i in range(quantidade_instrumentos):
+                instrumento = input("Insira o instrumento:")
+                instrumentos.append(instrumento)
+        membro_instrumentos += (instrumentos,)
+        membro_descricao.append(membro_instrumentos)
+        bandas[banda] = membro_descricao
+        print("Banda registrada!")
+    else:
+        print("Banda ainda nao registrada")
+
+
+def print_dicionario(bandas):
+    for
+        for i in range(len(membros_descricao)):
+        
 
 
 
 
-bandas= {   "Beatles"   : [ 1960 ,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bandas = {   "Beatles"   : [ 1960 ,
                                [ ("John Lennon", ["Guitarra", "Vocal"] ), 
                                 ("Paul McCartney",["Baixo", "Vocal"] ), 
                                 ("George Harrison", ["Guitarra"] ), 
@@ -75,4 +124,3 @@ bandas= {   "Beatles"   : [ 1960 ,
                                [ ("Kurt Cobain ", ["Guitarra", "Vocal"] ), 
                                 ("Krist Novoselic ", ["Baixo"] ),
                                 ("Dave Grohl ", ["Bateria"] ) ] ] }
-
